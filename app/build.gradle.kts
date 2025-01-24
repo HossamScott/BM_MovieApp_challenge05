@@ -56,13 +56,18 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
-    testImplementation ("junit:junit:4.13.2")
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation ("io.mockk:mockk:1.13.5")
+
     testImplementation (libs.mockito.core)
     testImplementation (libs.mockito.inline)
     testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.0")
     testImplementation ("androidx.arch.core:core-testing:2.1.0")
     testImplementation ("io.mockk:mockk:1.13.5")  // or latest version
     testImplementation ("net.bytebuddy:byte-buddy:1.12.0")  // or latest version
+
 
     implementation("com.google.code.gson:gson:2.10.1")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
